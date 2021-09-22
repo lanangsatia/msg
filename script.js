@@ -1,6 +1,9 @@
 const form = document.getElementById('form');
 const inputName = document.getElementById('name');
 const inputMessage = document.getElementById('message');
+var timestamp = new Date().toISOString().split('T')[0]
+
+
 const postData = (url, data) => {
     fetch(url, {
       method: 'POST',
@@ -23,7 +26,7 @@ form.addEventListener('submit', (e) => {
   let data = {
     name: inputName.value,
     message: inputMessage.value,
-    timestamp: new Date(),
+    timestamp: new Date().toISOString().split('T')[0],
   };
 
   console.log(data);
@@ -33,6 +36,7 @@ form.addEventListener('submit', (e) => {
   
   inputName.value = '';
   inputMessage.value = '';
+  alert('Success');
 });
 
 
