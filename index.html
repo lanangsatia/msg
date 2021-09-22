@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Infinite Loop - Bootstrap 4.0 HTML Template</title>
+    <title>Just Share It !</title>
     <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
@@ -24,7 +24,7 @@ https://www.tooplate.com/view/2117-infinite-loop
       <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
         <div class="container">   
           <div class="tm-next">
-              <a href="#infinite" class="navbar-brand">Infinite Loop</a>
+              <a href="#infinite" class="navbar-brand">Just Share It !</a>
           </div>             
             
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,18 +41,6 @@ https://www.tooplate.com/view/2117-infinite-loop
               Write whatever you want to write~
             </p>
 
-            <div style="width:500px; text-align: center; margin: 0px auto; ">
-              <form method="POST">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="name"placeholder="Name">
-                  
-                  <label for="message" class="form-label">Message</label>
-                  <input type="text" class="form-control" id="message" name="message" placeholder="Ur Message">
-                  <br>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
         </div>
       </div>
       
@@ -61,14 +49,45 @@ https://www.tooplate.com/view/2117-infinite-loop
       
 
       <div class="tm-next tm-intro-next">
-        <a href="#testimonials" class="text-center tm-down-arrow-link">
-          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        <a  class="text-center tm-down-arrow-link" data-toggle="modal" data-target="#form">
+          <i class="fas fa-plus fa-arrow-down tm-down-arrow"></i>
         </a>
-      </div>      
+      </div>
     </section>
 
+    <!-- Popup Modal -->
+    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Write whatever you</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="" id="form">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Your Name or Initial">
+              </div>
+
+              <div class="form-group">
+                <label for="nama">Message</label>
+                <input type="text" class="form-control" id="message" name="message" aria-describedby="message" placeholder="Your Messages" required>
+              </div>
+              
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     
-    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2" >      
       <div class="container tm-testimonials-content">
         <div class="row">
           <div class="col-lg-12 tm-content-box">
@@ -76,37 +95,38 @@ https://www.tooplate.com/view/2117-infinite-loop
             <p class="mx-auto tm-section-desc text-center">
                 Nulla dictum sem non eros euismod, eu placerat tortor lobortis. Suspendisse id velit eu libero pellentesque interdum. Etiam quis congue eros.
               </p>
-            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
-              <div class="tm-testimonials-carousel">
-                <figure class="tm-testimonial-item">
-                  <img src="img/testimonial-img-01.jpg" alt="Image" class="img-fluid mx-auto">
-                  <blockquote>This background image includes a semi-transparent overlay layer. This section also has a parallax image effect.</blockquote>
-                  <figcaption>Catherine Win (Designer)</figcaption>
-                </figure>
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2" style="margin:0px auto;">
+
+
+              <div class="tm-testimonials-carousel" style="text-align: center; margin:0px auto;" >
+                
+                
+                <!-- <figure class="tm-testimonial-item" data-sheet-best="https://sheet.best/api/sheets/280c3557-6f7e-4055-9d3b-22b571749774">
+                  <blockquote>{{ message }}</blockquote>
+                  <figcaption>{{ name }}</figcaption>
+                </figure> -->
 
                 <figure class="tm-testimonial-item">
-                  <img src="img/testimonial-img-02.jpg" alt="Image" class="img-fluid mx-auto">
                   <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
                   <figcaption>Dual Rocker (CEO)</figcaption>
                 </figure>
 
                 <figure class="tm-testimonial-item">
-                  <img src="img/testimonial-img-03.jpg" alt="Image" class="img-fluid mx-auto">
-                  <blockquote>Nulla finibus ligula nec tortor convallis tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus.</blockquote>
-                  <figcaption>Sandar Soft (Marketing)</figcaption>
+                  <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
+                  <figcaption>Dual Rocker (CEO)</figcaption>
                 </figure>
 
                 <figure class="tm-testimonial-item">
-                  <img src="img/testimonial-img-04.jpg" alt="Image" class="img-fluid mx-auto">
-                  <blockquote>Curabitur rutrum pharetra lobortis. Pellentesque vehicula, velit quis eleifend fermentum, erat arcu aliquet neque.</blockquote>
-                  <figcaption>Oliva Htoo (Designer)</figcaption>
+                  <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
+                  <figcaption>Dual Rocker (CEO)</figcaption>
                 </figure>
 
                 <figure class="tm-testimonial-item">
-                  <img src="img/testimonial-img-02.jpg" alt="Image" class="img-fluid mx-auto">
-                  <blockquote>Integer sit amet risus et erat imperdiet finibus. Nam lacus nunc, vulputate id ex eget, euismod auctor augue.</blockquote>
-                  <figcaption>Jacob Joker (CTO)</figcaption>
+                  <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
+                  <figcaption>Dual Rocker (CEO)</figcaption>
                 </figure>
+                
+
               </div>
             </div>
           </div>
@@ -117,13 +137,15 @@ https://www.tooplate.com/view/2117-infinite-loop
     
   
 
-    
+    <script src="script.js"></script>
     <script src="js/jquery-1.9.1.min.js"></script>     
     <script src="slick/slick.min.js"></script>
     <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/easing.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>     
     <script src="js/bootstrap.min.js"></script> 
+    <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
+
     <script>
 
       function getOffSet(){
