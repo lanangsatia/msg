@@ -39,7 +39,8 @@ form.addEventListener('submit', (e) => {
   
   inputName.value = '';
   inputMessage.value = '';
-  alert('Success');
+  confirm('Success');
+  window.location.reload();
 });
 
 
