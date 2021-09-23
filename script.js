@@ -1,7 +1,10 @@
 const form = document.getElementById('form');
 const inputName = document.getElementById('name');
 const inputMessage = document.getElementById('message');
-var timestamp = new Date().toISOString().split('T')[0]
+var d = new Date().getDate();
+var m = new Date().getMonth();
+var y = new Date().getFullYear();
+var timestamp = d + "/" + m + "/" + y
 
 
 const postData = (url, data) => {
@@ -26,7 +29,7 @@ form.addEventListener('submit', (e) => {
   let data = {
     name: inputName.value,
     message: inputMessage.value,
-    timestamp: new Date().toISOString().split('T')[0],
+    timestamp: timestamp,
   };
 
   console.log(data);
@@ -53,5 +56,61 @@ function getData(){
     }
   })
 }
+
+	let allNamesElm = document.getElementById("allNames")
+	let loaderElm = document.getElementById("loader")
+	let errorMessageElm = document.getElementById("errorMessage")
+	
+	function setErrorDisplay(){
+	loaderElm.style.display = "none"
+	allNamesElm.style.display = "none"
+	errorMessageElm.style.display = "block"
+	}
+			
+	fetch("https://api.apispreadsheets.com/data/18509/").then(res=>{
+		if (res.status === 200){
+			res.json().then(data=>{ 
+				const yourData = data["data"]
+				for(let i = 0; i < yourData.length; i++){
+				    let rowInfo = yourData[i]
+				    let rowInfoDiv = document.createElement("div")
+				    rowInfoDiv.classList.add("name-row")
+					
+				    let rowName = document.createElement("h4")
+				    let rowNameNode = document.createTextNode(rowInfo["name"])
+				    rowName.appendChild(rowNameNode)
+				    rowName.classList.add("name")
+					
+				    let rowWritten = document.createElement("p")
+				    let rowWrittenNode = document.createTextNode(rowInfo["message"])
+				    rowWritten.appendChild(rowWrittenNode)
+				    rowWritten.classList.add("message")
+	
+				    let rowtimestamp = document.createElement("p")
+            let rowTimestampNode = document.createTextNode(rowInfo["timestamp"])
+            rowtimestamp.appendChild(rowTimestampNode)
+				    rowtimestamp.classList.add("timestamp")
+					
+				    rowInfoDiv.appendChild(rowName)
+				    rowInfoDiv.appendChild(rowWritten)
+				    rowInfoDiv.appendChild(rowtimestamp)
+					
+				    allNamesElm.appendChild(rowInfoDiv)
+				}
+				
+				loaderElm.style.display = "none"
+				allNamesElm.style.display = "block"
+				errorMessageElm.style.display = "none"
+
+			}).catch(err => {
+				setErrorDisplay()
+			})
+		}
+		else{
+			setErrorDisplay()
+			}
+		}).catch(err =>{
+			setErrorDisplay()
+		})
 
 

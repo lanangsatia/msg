@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <link rel="stylesheet" href="style.css">
+
 <!--
 Tooplate 2117 Infinite Loop
 https://www.tooplate.com/view/2117-infinite-loop
@@ -26,10 +28,6 @@ https://www.tooplate.com/view/2117-infinite-loop
           <div class="tm-next">
               <a href="#infinite" class="navbar-brand">Just Share It !</a>
           </div>             
-            
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars navbar-toggler-icon"></i>
-          </button>
                  
         </div>
       </nav>
@@ -98,10 +96,22 @@ https://www.tooplate.com/view/2117-infinite-loop
             <div class="mx-auto tm-gallery-container tm-gallery-container-2" style="margin:0px auto;">
 
 
-              <div class="tm-testimonials-carousel" style="text-align: center; margin:0px auto;" >
+              <div class="tm-testimonials-carousel" style="text-align: center; margin:30px auto;" >
                 
-                <div id="content">
-                  <figure class="tm-testimonial-item" data-sheet-best="https://sheet.best/api/sheets/280c3557-6f7e-4055-9d3b-22b571749774">
+                <!-- <div id="display">
+                  <div id="loader"> 
+                  </div>
+
+                  <div id="allNames">
+                  </div>
+
+                  <div id="errorMessage"> 
+                    <h2> Failed to get data. Please refresh </h2>
+                  </div>
+                </div> -->
+
+                <div id="content" data-sheet-best="https://sheet.best/api/sheets/280c3557-6f7e-4055-9d3b-22b571749774">
+                  <figure class="tm-testimonial-item">
                     <blockquote>{{ message }}</blockquote>
                     <figcaption>{{ name }} - {{ timestamp }} </figcaption>
                   </figure>
@@ -110,8 +120,8 @@ https://www.tooplate.com/view/2117-infinite-loop
                 <!-- <figure class="tm-testimonial-item">
                   <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
                   <figcaption>Dual Rocker (CEO)</figcaption>
-                </figure>
-
+                </figure> -->
+                <!---
                 <figure class="tm-testimonial-item">
                   <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>
                   <figcaption>Dual Rocker (CEO)</figcaption>

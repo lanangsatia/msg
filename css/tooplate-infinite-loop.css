@@ -7,6 +7,8 @@ https://www.tooplate.com/view/2117-infinite-loop
 */
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
 
 body {
 	font-family: "Raleway", sans-serif;
@@ -40,8 +42,9 @@ a:focus {
 }
 
 blockquote {
-  font-size: 0.86em;
+  font-size: 20px;
   line-height: 1.8em;
+  font-family: 'Kalam', cursive;
 }
 
 .tm-section-pad-top {
@@ -317,7 +320,7 @@ blockquote {
 .tm-testimonial-item figcaption {
   text-align: right;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 /* Work */
