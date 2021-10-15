@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const inputName = document.getElementById('name');
+// const inputName = document.getElementById('name');
 const inputMessage = document.getElementById('message');
 var d = new Date().getDate();
 var m = new Date().getMonth();
@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   let data = {
-    name: inputName.value,
+    // name: inputName.value,
     message: inputMessage.value,
     timestamp: timestamp,
   };
@@ -37,7 +37,7 @@ form.addEventListener('submit', (e) => {
     'https://sheet.best/api/sheets/280c3557-6f7e-4055-9d3b-22b571749774',data
   );
   
-  inputName.value = '';
+//   inputName.value = '';
   inputMessage.value = '';
   confirm('Success');
   window.location.reload();
@@ -58,15 +58,15 @@ function getData(){
   })
 }
 
-	let allNamesElm = document.getElementById("allNames")
-	let loaderElm = document.getElementById("loader")
-	let errorMessageElm = document.getElementById("errorMessage")
+	// let allNamesElm = document.getElementById("allNames")
+	// let loaderElm = document.getElementById("loader")
+	// let errorMessageElm = document.getElementById("errorMessage")
 	
-	function setErrorDisplay(){
-	loaderElm.style.display = "none"
-	allNamesElm.style.display = "none"
-	errorMessageElm.style.display = "block"
-	}
+	// function setErrorDisplay(){
+	// // loaderElm.style.display = "none"
+	// allNamesElm.style.display = "none"
+	// errorMessageElm.style.display = "block"
+	// }
 			
 	fetch("https://api.apispreadsheets.com/data/18509/").then(res=>{
 		if (res.status === 200){
@@ -99,9 +99,9 @@ function getData(){
 				    allNamesElm.appendChild(rowInfoDiv)
 				}
 				
-				loaderElm.style.display = "none"
-				allNamesElm.style.display = "block"
-				errorMessageElm.style.display = "none"
+				// loaderElm.style.display = "none"
+				// allNamesElm.style.display = "block"
+				// errorMessageElm.style.display = "none"
 
 			}).catch(err => {
 				setErrorDisplay()
@@ -111,7 +111,7 @@ function getData(){
 			setErrorDisplay()
 			}
 		}).catch(err =>{
-			setErrorDisplay()
+			// setErrorDisplay()
 		})
 
 

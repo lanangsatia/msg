@@ -67,7 +67,7 @@
     <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header border-bottom-0">
+          <div class="modal-header border-bottom-0";>
             <h5 class="modal-title" id="exampleModalLabel">Write whatever you</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -75,14 +75,14 @@
           </div>
           <form action="" id="form">
             <div class="modal-body">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Your Name or Initial">
-              </div>
+              </div> -->
 
               <div class="form-group">
-                <label for="nama">Message</label>
-                <input type="text" class="form-control" id="message" name="message" aria-describedby="message" placeholder="Your Messages" required>
+                <label for="nama">Your Messages/Quotes</label>
+                <input type="text" class="form-control" id="message" name="message" aria-describedby="message" placeholder="Your Messages" required autofocus> 
               </div>
               
             </div>
@@ -93,6 +93,8 @@
         </div>
       </div>
     </div>
+
+
 
     
     <section id="testimonials" class="tm-section-pad-top tm-parallax-2" >      
@@ -123,7 +125,7 @@
                 <div id="content" data-sheet-best="https://sheet.best/api/sheets/280c3557-6f7e-4055-9d3b-22b571749774">
                   <figure class="tm-testimonial-item">
                     <blockquote>{{ message }}</blockquote>
-                    <figcaption>{{ name }} - {{ timestamp }} </figcaption>
+                    <figcaption>{{ timestamp }} </figcaption>
                   </figure>
                 </div>
 
@@ -153,7 +155,7 @@
           </div>
         </div>
       </div>
-      <div class="tm-bg-overlay"></div>
+      <!-- <div class="tm-bg-overlay"></div> -->
     </section>
     
   
@@ -167,6 +169,8 @@
     <script src="js/bootstrap.min.js"></script> 
     <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
 
+    
+ 
     <script>
 
       function getOffSet(){
@@ -340,5 +344,11 @@
         });
       });
     </script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+     $("#form").modal('show');
+ });
+</script>
   </body>
 </html>
