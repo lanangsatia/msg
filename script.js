@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 // const inputName = document.getElementById('name');
 const inputMessage = document.getElementById('message');
 var d = new Date().getDate();
-var m = new Date().getMonth();
+var m = new Date().getMonth()+1;
 var y = new Date().getFullYear();
 var timestamp = d + "/" + m + "/" + y
 
